@@ -15,11 +15,19 @@
     </div>
     <div class="content">
       <div id="menu" class="menu">
+        <h4>Action Panel</h4>
         <label for="rows">Rows: </label>
         <input id="rows" type="number" name="rows" value="15" />
         <label for="columns">Columns: </label>
         <input id="columns" type="number" name="columns" value="20" />
-        <button class="btn btn-primary" id="startAlgorithm">Start</button>
+        <div class="buttonContainer">
+          <button class="btn btn-primary" id="resetGrid">Reset Grid</button>
+        </div>
+        <div class="buttonContainer">
+          <button class="btn btn-primary" id="startAlgorithm">
+            Start Algorithm
+          </button>
+        </div>
       </div>
       <div class="gridContainer">
         <div class="grid"></div>

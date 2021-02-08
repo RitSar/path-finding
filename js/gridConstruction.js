@@ -19,19 +19,18 @@ function constructGrid(a, b) {
 
 $(() => {
   constructGrid(15, 20);
-  $(".cell").on("click", (e) => {
-    // console.log("yo", e.target.id);
-    $("#" + e.target.id).toggleClass("obstacle");
+  $("#resetGrid").on("click", () => {
+    $(".gridContainer").removeClass("stopInteractions");
+    let a = $("#rows").val();
+    let b = $("#columns").val();
+    constructGrid(a, b);
+    allowobstacles();
   });
+  allowobstacles();
 });
 
-$("input").on("change keyup", () => {
-  console.log("--> input changed");
-  let a = $("#rows").val();
-  let b = $("#columns").val();
-  constructGrid(a, b);
+function allowobstacles() {
   $(".cell").on("click", (e) => {
-    // console.log("yo", e.target.id);
     $("#" + e.target.id).toggleClass("obstacle");
   });
-});
+}
