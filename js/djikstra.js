@@ -86,7 +86,7 @@ function traverse(startNode, endNode) {
 
 $(() => {
   $("#startAlgorithm").on("click", () => {
-    $(".gridContainer").addClass("stopInteractions");
+    $(".grid").addClass("stopInteractions");
     let startNode = $(".start").attr("id");
     let endNode = $(".end").attr("id");
     traverse(startNode, endNode);

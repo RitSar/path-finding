@@ -18,9 +18,9 @@ function constructGrid(a, b) {
 }
 
 $(() => {
-  constructGrid(15, 20);
+  constructGrid(10, 15);
   $("#resetGrid").on("click", () => {
-    $(".gridContainer").removeClass("stopInteractions");
+    $(".grid").removeClass("stopInteractions");
     let a = $("#rows").val();
     let b = $("#columns").val();
     constructGrid(a, b);
